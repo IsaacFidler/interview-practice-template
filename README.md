@@ -19,10 +19,10 @@ Full-stack Next.js + Nest.js template for technical interview practice.
 
 ```bash
 # Install dependencies
-npm install
+yarn
 
 # Start both frontend and backend in development mode
-npm run dev
+yarn dev
 ```
 
 - Frontend: http://localhost:3000
@@ -32,21 +32,21 @@ npm run dev
 
 ```bash
 # Development
-npm run dev          # Start both frontend and backend
-npm run dev:web      # Start frontend only
-npm run dev:api      # Start backend only
+yarn dev          # Start both frontend and backend
+yarn dev:web      # Start frontend only
+yarn dev:api      # Start backend only
 
 # Build
-npm run build        # Build both apps
-npm run build:web    # Build frontend only
-npm run build:api    # Build backend only
+yarn build        # Build both apps
+yarn build:web    # Build frontend only
+yarn build:api    # Build backend only
 
 # Testing
-npm run test         # Run backend tests
-npm run lint         # Lint both apps
+yarn test         # Run backend tests
+yarn lint         # Lint both apps
 
 # Cleanup
-npm run clean        # Remove all node_modules and build artifacts
+yarn clean        # Remove all node_modules and build artifacts
 ```
 
 ## Project Structure

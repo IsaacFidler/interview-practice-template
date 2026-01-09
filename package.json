@@ -7,14 +7,14 @@
     "apps/*"
   ],
   "scripts": {
-    "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
-    "dev:web": "npm run dev -w apps/web",
-    "dev:api": "npm run start:dev -w apps/api",
-    "build": "npm run build -w apps/api && npm run build -w apps/web",
-    "build:web": "npm run build -w apps/web",
-    "build:api": "npm run build -w apps/api",
-    "lint": "npm run lint -w apps/web && npm run lint -w apps/api",
-    "test": "npm run test -w apps/api",
+    "dev": "concurrently \"yarn dev:api\" \"yarn dev:web\"",
+    "dev:web": "yarn workspace web dev",
+    "dev:api": "yarn workspace api start:dev",
+    "build": "yarn build:api && yarn build:web",
+    "build:web": "yarn workspace web build",
+    "build:api": "yarn workspace api build",
+    "lint": "yarn workspace web lint && yarn workspace api lint",
+    "test": "yarn workspace api test",
     "clean": "rm -rf apps/*/node_modules apps/*/.next apps/*/dist node_modules"
   },
   "devDependencies": {
